@@ -14,7 +14,9 @@ IOEμは、SCC-Emuを搭載する製品を中心に以下の8つのカテゴリ�
 
 Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」では、Dual 8-bit PIC構成で目一杯の機能を詰め込みました。PICのNVMを活用したSRAM-BACKUP Emuにも対応しています。
 
-また、そのVAULTの技術を応用して、IOEμシリーズの原点「SCC-Emu Simplex」にPAC機能(SRAM-BACKUP Emu機能)を追加した「[SCC-PAC Emu](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)」、及び、SCC＋、ROM/RAM-Emu、MegaCON機能まで実装し **Simplex** を大幅にアップデートした「[SCC-Emu Simplex **XR+**](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)」を最新作としてリリースしました。こちらは、Single PIC構成の限界にチャレンジしています。
+また、そのVAULTの技術を応用して、IOEμシリーズの原点「SCC-Emu Simplex」にPAC機能(SRAM-BACKUP Emu機能)を追加した「[SCC-PAC Emu](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)」、及び、SCC＋、ROM/RAM-Emu、MegaCON機能まで実装し **Simplex** を大幅にアップデートした「[SCC-Emu Simplex **XR+**](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)」もリリースし、Single PIC構成の限界にチャレンジしています。
+
+そして、遂にIOEμ最新作として[PSG-Emu](/PSG-Emu_Simplex/readme_psg-emu.md)がSimplexシリーズに加わりました！ 1st-PSG/2nd-PSGの両方に対応しています。
 
 ### (1) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
@@ -40,6 +42,7 @@ Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH
 ### (6) Simplex :
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
+* [IOEμ: PSG-Emu Simplex with built-in DAC](/PSG-Emu_Simplex/readme_psg-emu.md)  **New !**
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
 * [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)
 
