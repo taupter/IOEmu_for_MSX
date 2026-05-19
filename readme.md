@@ -16,7 +16,7 @@ Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH
 
 また、そのVAULTの技術を応用して、IOEμシリーズの原点「SCC-Emu Simplex」にPAC機能(SRAM-BACKUP Emu機能)を追加した「[SCC-PAC Emu](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)」、及び、SCC＋、ROM/RAM-Emu、MegaCON機能まで実装し **Simplex** を大幅にアップデートした「[SCC-Emu Simplex **XR+**](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)」もリリースし、Single PIC構成の限界にチャレンジしています。
 
-そして、遂にIOEμ最新作として[PSG-Emu](/PSG-Emu_Simplex/readme_psg-emu.md)がSimplexシリーズに加わりました！ 1st-PSG/2nd-PSGの両方に対応しています。
+そして、遂にIOEμ最新作として[PSG-Emu](/PSG-Emu_Simplex/readme_psg-emu.md)がSimplexシリーズに加わりました！ 1st-PSG/2nd-PSGの両方に対応しています。また、この1st-PSG版を最大限に楽しむために、LINE-OUTを装備するMixer-Amp付きの[SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)も用意しました。例えば、「1st-PSG版のPSG-Emu」と「SCC対応ゲームカートリッジ」をSlotExpander MIX+のスロットにセットで接続すると、PSGとSCCサウンドをミックスしてLINE-OUTに直接出力できます。経年劣化のあるMSX本体のアンプに比べてMIX+のLINE-OUTはノイズを軽減でき、音量の大、小に関わらず、ゲーム中のノイズが気にならずにプレイに集中できる...かもしれません（誇大あり）。
 
 ### (1) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
@@ -52,7 +52,8 @@ Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH
 * [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 
 ### (8) 機能拡張 :
-* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md) **DESIGN update Rev.A !**
+* [IOEμ: SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md) **New !**
+* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md) **Rev.A !**
 * [IOEμ: MemMappper-Emu](/MemMapper-Emu/readme_memmapper-emu.md) 
 
 

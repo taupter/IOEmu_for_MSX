@@ -10,7 +10,7 @@
 * PICのファームウェアは、1st-PSG版、2nd-PSG版の2種類を用意しています。
 * 1st-PSGは、MSX本体内蔵のPSGと同一のIOポートアドレスにアサインされます。
 * このため、本体内蔵のPSGとのIOバスの衝突を避けるため、レジスタは書き込み専用です。
-* 1st-PSGは、サウンド出力機能を搭載するIOEμ:SlotExpander MIX+（準備中）と一緒に使用をすることを想定しています。
+* 1st-PSGは、サウンド出力機能を搭載する[SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)と一緒に使用をすることを想定しています。
 * 一方、2nd-PSGのIOポートアドレスはユーザー領域の0x10-0x12にアサインされます。
 * このIOポートアドレスはDouble PSGと同一のため、Double PSG対応ソフトでPSG-Emuを使用できます。
 * 2nd-PSGのレジスタはRead/Write可能です。
@@ -32,9 +32,9 @@
 
 MSX本体の電源をオフしてから、空きスロットにPSG-Emuのファームウェアを書き込んだ**DCSG-Emu Simplex基板**（以下、PSG-Emu）を挿入して下さい。
 
-1st-PSG版はMSX本体のPSGと同じIOポートアドレスを使用しているため、通常単体での利用は想定していません。SlotExpander MIX+（準備中）と一緒に使用することを想定しています。このSlotExpanderのミキサ回路によりSCC、FM音源カートリッジ等のサウンド出力とPSG-Emuの出力をMIXして、SlotExpanderのLINE-OUTから出力することが出来ます。
+1st-PSG版はMSX本体のPSGと同じIOポートアドレスを使用しているため、通常単体での利用は想定していません。IOEμの拡張スロット「[SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)」と一緒に使用することを想定しています。この拡張スロットはMIX回路とLINT-OUTを備えており、SCC、FM音源カートリッジ等のサウンド出力とPSG-Emuの出力をMIXして、そのLINE-OUTから出力することが出来ます。
 
-2nd-PSG版はDouble PSGと同じポートアドレスにアサインしていますので、Double PSG対応ソフト（VGM Playerや一部のゲームソフト等）で使用できます。
+一方、2nd-PSG版はDouble PSGと同じポートアドレスにアサインしていますので、Double PSG対応ソフト（VGM Playerや一部のゲームソフト等）で使用できます。
 
 以下、それぞれのIOポートアドレスです。
 PSGレジスタの仕様はMSXテクニカルハンドブックやAY-3-8910のデータシート等を参照してください。
@@ -62,7 +62,7 @@ PSG-Emuのファームウェアには、前述の通り、1st-PSG版と2nd-PSG�
 
 標準ファームウェアはPIC内蔵DACを使用していますが、DCSG/PSG-Emu Simplex基板では、このDACの高インピーダンスの出力を直接サウンド出力に使用するため、SOUND入力の入力インピーダンスが比較的低いMSX本体の場合は音が歪む可能性があります（OneChipBook、CX5Fでは歪むことを確認しています）。DAC版で音が歪むなどの音質異常が発生する場合は、PWM版（準備中）のファームウェアをお試しください。
 
-※ IOEμ: SlotExpander MIX+と一緒に使用する場合は、標準のDAC版ファームウェアを使用してください。
+※ [SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)とセットで使用する場合は、標準のDAC版ファームウェアを使用してください。
 
 ### (2) MSX本体のリセット
 
@@ -76,9 +76,9 @@ PSG-Emuは、MSX本体のリセット信号を使用していません。
 
 * FS-A1GT (turboR)
 * HB-F1XDJ (MSX2+)
-* IOEμ:SlotExpander MIX+（高Z入力のMIX回路付き拡張スロット） ※リリース準備中です。
+* [IOEμ: SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)（高Z入力のMIX回路付き拡張スロット） 
 
-以下の機種はSOUND入力の入力インピーダンスの問題でDAC版ファームウェアでは歪が発生します。IOEμ:SlotExpander MIX+（準備中）と併用頂くか、今後リリース予定のPWM版ファームウェアを使用ください。
+以下の機種はSOUND入力の入力インピーダンスが比較的低いため、DAC版ファームウェアでは歪が発生します。SlotExpander MIX+と併用頂くか、今後リリース予定のPWM版ファームウェアを使用ください。
 
 * CX5F (MSX)
 * OneChipBook (MSX2+互換機)
