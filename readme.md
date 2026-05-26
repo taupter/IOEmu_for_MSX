@@ -9,7 +9,7 @@ IOEμシリーズは、MSX実機用カートリッジとして使用できるIO�
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-IOEμは、SCC-Emuを搭載する製品を中心に以下の8つのカテゴリで計19種を公開しています。
+IOEμは、SCC-Emuを搭載する製品を中心に以下の8つのカテゴリで計21種を公開しています。
 それぞれの特徴、使用方法等に関しては、リンク先の各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
 Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」では、Dual 8-bit PIC構成で目一杯の機能を詰め込みました。PICのNVMを活用したSRAM-BACKUP Emuにも対応しています。
