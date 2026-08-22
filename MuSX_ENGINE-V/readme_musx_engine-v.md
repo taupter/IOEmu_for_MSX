@@ -28,7 +28,7 @@
 * 256KByte Memory Mapper RAM
 * PPI(8255)
 * AY-3-8910(PSG + GPIO) ※ PSGサウンドはPIC内蔵DACより出力されます。
-* Prim-SLOTSL x4 ※ 4個の基本スロットに対応します。
+* Prim-SLOTSL x4 ※ 4つの基本スロットに対応します。
 * CS1,CS2,CS12  ※ ROM用CS信号の出力。
 * M1-1WAIT  ※ MSXの規格上、M1サイクルに1WAIT挿入する必要があります。
 * VDPセレクタ ※ VDPのIOポートアドレスのデコード信号を出力可能です。
@@ -53,7 +53,7 @@ MSXCLOCKは、PICから出力されます。クロック周波数は、Normal mo
 
 ## 5. Key入力
 
-UART入力（シリアル入力）をMSXのKeyMatrixに変換します。現状、PCのTeraTermとの接続を想定していますが、今後個別キーボードへの対応も行う予定です。UARTの設定は、以下の通りです。
+UART入力（シリアル入力）をMSXのKeyMatrixに変換します。現状、PCのTeraTermとの接続を想定していますが、今後、個別キーボードへの対応も行う予定です。UARTの設定は、以下の通りです。
 
 |項目|設定値|備考
 |--|--|--
@@ -163,7 +163,7 @@ firmwareフォルダ内の**HEXファイル**は、PICマイコン用のFirmware
 * U5 : musx_U5_pic16_rev[xxx].hex
 * U6 : musx_U6_pic16_rev[xxx].hex
 
-尚、前述の通り、MAIN-ROMをROMエミュレーションで利用する場合は、U2のfirmwareを書き込み前に「musx_U2_pic18_rev-xxx.hex」とMAIN-ROMデータを、同梱のマージツール [musx_mainrom_merge.exe](/MuSX_ENGINE-V/tools/public_release_20260816.zip) を使用してマージしてください。
+尚、前述の通り、MAIN-ROMをROMエミュレーションで利用する場合は、U2のfirmwareを書き込む前に「musx_U2_pic18_rev-xxx.hex」とMAIN-ROMデータを、同梱のマージツール [musx_mainrom_merge.exe](/MuSX_ENGINE-V/tools/public_release_20260816.zip) を使用してマージしてください。
 
 オンボードでのFirmware書き込み方法は以下を参考にしてください。
 
@@ -189,7 +189,7 @@ firmwareを書き込む順番は、**U2を一番最後に書き込みます（U2
 
 電源は、ベースボードから給電するか、又は5V出力の安定化電源をfirmwareの書き込み対象ではないスルーホール群の5VとGNDに接続して給電してください。
 
-**(注意) U2書き込み後に、再度、U3,U5,U6にfirmwareを書き込む場合は、一旦、U2をErase(IPEを使用してErase出来ます)してから、U3,U5,U6の書き込みを行い、最後にU2の書き込みを行ってください。また、前述のリセットスイッチ用のソルダージャンパーJP4～JP4をショートしている場合、SNAPとPICマイコンのCONNECTに失敗する場合があります。その際はソルダージャンパーをOPENにして書き込みを行ってください。それでも書き込みが出来ない場合は、μSX ENGINE-Vをベース基板から外し、安定化電源を使ってμSX ENGINE-V単体で書き込みを行って下さい。**
+**(注意) U2書き込み後に、再度、U3,U5,U6にfirmwareを書き込む場合は、一旦、U2をErase(IPEを使用してErase出来ます)してから、U3,U5,U6の書き込みを行い、最後にU2の書き込みを行ってください。また、前述のリセットスイッチ用のソルダージャンパーJP4～JP4をショートしている場合、SNAPとPICマイコンのCONNECTに失敗する場合があります。その際はソルダージャンパーをOPENにして書き込みを行ってください。それでも書き込みが失敗する場合は、μSX ENGINE-Vをベース基板から外し、安定化電源を使ってμSX ENGINE-V単体で書き込みを行って下さい。**
 
 以下は、μSX ENGINE-Vをベースボードに組み込んだ状態でのSNAPとの接続例です。
 
@@ -208,11 +208,11 @@ IPEを起動し、以下を参考にDeviceとHEXファイルを選択下さい�
 
 Deviceとfirmware(HEXファイル)を選択後、「Connect」をクリックするとIPEとターゲットのPICマイコンがリンクします。その後に「Program」をクリックするとfirmwareの書込みが行われます。「Erase」をクリックすると書き込み済みのfirmewareを消去できます。
 
-書き込みターゲットのPICマイコンを変更する際は、必ず電源をオフしてからSNAPの接続先を変更してください。U3, U5, U6,最後にU2のfirmwareの書き込みを行って下さい。
+ターゲットのPICマイコンを変更する際は、必ず電源をオフしてからSNAPの接続先を変更してください。U3, U5, U6,最後にU2のfirmwareの書き込みを行って下さい。
 
-![Firmware-selection](image/MUSX_FW_U2-3_PIC18.jpg)
+![Firmware-selection](image/musx_fw_u2-3_pic18.jpg)
 
-![Firmware-selection](image/MUSX_FW_U5-6_PIC16.jpg)
+![Firmware-selection](image/musx_fw_u5-6_pic16.jpg)
 
 ## 13. 基板の発注方法
 
