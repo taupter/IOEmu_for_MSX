@@ -2,58 +2,58 @@
 
 ## 概要
 
-IOEμシリーズは、MSX実機用カートリッジとして使用できるIOエミュレーターです。
+IOEμシリーズは、主にPIC18F Qシリーズなどの8-bitマイコンを使用して、MSXのさまざまな機能を実現するハードウェアシリーズです。
 
-主にPIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能をエミュレートしています。
+SCC音源をリアルタイムにエミュレーションする SCC-Emu から始まり、MIDI、DCSG、PSG、MegaCon、SOUND CARTRIDGE、 PAC、Memory Mapper、Slot Expanderなど、MSX実機で使用できるさまざまな機能へと展開してきました。
 
-例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
+そして現在では、その領域をMSX互換機そのものへと広げ、IOEμの技術を使って構成した μSX もシリーズに加わっています。
 
 ## 種類
-IOEμは、SCC-Emuを搭載する製品を中心に以下の8つのカテゴリで計21種を公開しています。
-それぞれの特徴、使用方法等に関しては、リンク先の各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
-Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」では、Dual 8-bit PIC構成で目一杯の機能を詰め込みました。PICのNVMを活用したSRAM-BACKUP Emuにも対応しています。
+現在、IOEμシリーズでは 8-bit PICベース の多様なハードウェアを公開しています。
+各製品の詳細や使用方法については、リンク先の各フォルダにあるREADMEを参照してください。
 
-また、そのVAULTの技術を応用して、IOEμシリーズの原点「SCC-Emu Simplex」にPAC機能(SRAM-BACKUP Emu機能)を追加した「[SCC-PAC Emu](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)」、及び、SCC＋、ROM/RAM-Emu、MegaCON機能まで実装し **Simplex** を大幅にアップデートした「[SCC-Emu Simplex **XR+**](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)」もリリースし、Single PIC構成の限界にチャレンジしています。
+### (1) μSX :
+**μSX is an MSX-compatible computer powered by 8-bit PIC microcontrollers.**
+* [IOEμ: μSX ENGINE-V (core-module)](/MuSX_ENGINE-V/readme_musx_engine-v.md) **New !**
+* [IOEμ: μSX SYSTEM Simplex (base-board)](/MuSX_SYSTEM_Simplex/readme_musx_system_simplex.md) **New !**
 
-そして、遂にIOEμ最新作として[PSG-Emu](/PSG-Emu_Simplex/readme_psg-emu.md)がSimplexシリーズに加わりました！ 1st-PSG/2nd-PSGの両方に対応しています。また、この1st-PSG版を最大限に楽しむために、LINE-OUTを装備するMixer-Amp付きの[SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)も用意しました。例えば、「1st-PSG版のPSG-Emu」と「SCC対応ゲームカートリッジ」をSlotExpander MIX+のスロットにセットで接続すると、PSGとSCCサウンドをミックスしてLINE-OUTに直接出力できます。経年劣化のあるMSX本体のアンプに比べてMIX+のLINE-OUTはノイズを軽減でき、音量の大、小に関わらず、ゲーム中のノイズが気にならずにプレイに集中できる...かもしれません（誇大あり）。
-
-### (1) SOUND CARTRIDGE Emu :
+### (2) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
 * [IOEμ: SCC-Emu Plus RAM QUAD with 2Mbit RAM](/SCC-Emu_Plus_2Mbit_RAM_QUAD/readme_scc-emu_plus_ram_quad.md)  
 
-### (2) FLASH-ROM用MegaCON-Emu :
-* [IOEμ: ROM MORPH – Multi-Mapper Support with 4Mbit Flash-ROM](/ROM_MORPH/readme_rom_morph.md)  **New !**
-* [IOEμ: ROM MORPH VAULT – Multi-Mapper Support with Flash-ROM and SRAM Backup Emulation](/ROM_MORPH/readme_rom_morph.md)  **New !**
+### (3) FLASH-ROM用MegaCON-Emu :
+* [IOEμ: ROM MORPH – Multi-Mapper Support with 4Mbit Flash-ROM](/ROM_MORPH/readme_rom_morph.md)  
+* [IOEμ: ROM MORPH VAULT – Multi-Mapper Support with Flash-ROM and SRAM Backup Emulation](/ROM_MORPH/readme_rom_morph.md) 
 
-### (3) MASK-ROM再生用MegaCON-Emu :
+### (4) MASK-ROM再生用MegaCON-Emu :
 * [IOEμ: MegaSCC-Emu for KONAMI-SCC MASK-ROM](/MegaSCC-Emu/readme_megascc-emu.md)  
 * [IOEμ: MegaCON-Emu  for ASCII8K MASK-ROM](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  
 
-### (4) SCC-Emu Simplex **XR+** : 
+### (5) SCC-Emu Simplex **XR+** : 
 **An eXtended Simplex build featuring ROM/RAM emulation, SCC+, and 64KB MegaCON support on a single 8-bit PIC.**
-* [IOEμ: SCC-Emu Simplex **XR+** with 12-bit DAC](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)  **New !**
-* [IOEμ: SCC-Emu Simplex **XR+** with 15-bit DAC](/SCC-Emu_Simplex_XR+_15bit-DAC/readme_scc-emu_xr+_15.md)  **New !**
+* [IOEμ: SCC-Emu Simplex **XR+** with 12-bit DAC](/SCC-Emu_Simplex_XR+_12bit-DAC/readme_scc-emu_xr+_12.md)
+* [IOEμ: SCC-Emu Simplex **XR+** with 15-bit DAC](/SCC-Emu_Simplex_XR+_15bit-DAC/readme_scc-emu_xr+_15.md)
 
-### (5) SCC-PAC Emu :
-* [IOEμ: SCC-PAC Emu with 12-bit DAC](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)  **New !**
-* [IOEμ: SCC-PAC Emu with 15-bit DAC](/SCC-PAC_Emu_15bit-DAC/readme_scc-pac_emu_15.md)  **New !**
+### (6) SCC-PAC Emu :
+* [IOEμ: SCC-PAC Emu with 12-bit DAC](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)
+* [IOEμ: SCC-PAC Emu with 15-bit DAC](/SCC-PAC_Emu_15bit-DAC/readme_scc-pac_emu_15.md)
 
-### (6) Simplex :
+### (7) Simplex :
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
-* [IOEμ: PSG-Emu Simplex with built-in DAC](/PSG-Emu_Simplex/readme_psg-emu.md)  **New !**
+* [IOEμ: PSG-Emu Simplex with built-in DAC](/PSG-Emu_Simplex/readme_psg-emu.md)
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
 * [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)
 
-### (7) Multiplex :
+### (8) Multiplex :
 * [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)
 * [Motor-Driver Unit for IOEμ](/MotorDriver_Unit/readme_motordriver_unit.md)
 * [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 
-### (8) 機能拡張 :
-* [IOEμ: SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md) **New !**
-* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md) **Rev.A !**
+### (9) 機能拡張 :
+* [IOEμ: SlotExpander MIX+](/SlotExpander_MIX+/readme_slotexpander_MIX+.md)
+* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md)
 * [IOEμ: MemMappper-Emu](/MemMapper-Emu/readme_memmapper-emu.md) 
 
 
